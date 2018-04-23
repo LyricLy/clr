@@ -1,0 +1,11 @@
+" current " 0 setref
+" multiplier " 46826782 setref
+" increment " 469292692 setref
+" modulo " 100000 setref
+% := / pop
+% :: int int -> int
+random := " current " getref " multiplier " getref * " increment " getref + " modulo " getref % " current " flip setref " current " getref
+seed := " current " flip setref
+multiplier := " multiplier " flip setref
+increment := " increment " flip setref
+modulo := " modulo " flip setref
