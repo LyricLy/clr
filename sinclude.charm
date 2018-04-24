@@ -1,1 +1,1 @@
-sinclude := dup " arg " flip setref " .charm " concat " arg " getref " . " concat include
+sinclude := dup " arg " flip setref " .charm " concat " arg " getref " : " concat include
