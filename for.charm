@@ -1,0 +1,5 @@
+_for_args := " for_function " flip setref " for_iterable " flip setref
+_for_body := " for_iterable " getref len flip pop [ " for_iterable " getref " for_index " getref at flip pop " for_item " flip setref " for_function " getref i " for_index " getref [ " for_rev " getref 1 eq ] [ 1 - ] [ 1 + ] ifthen " for_index " flip setref ] flip repeat i
+item := " for_item " getref
+for := _for_args " for_index " 0 setref _for_body
+revfor := _for_args " for_index " " for_iterable " len flip pop 1 - setref " for_rev " 1 setref _for_body

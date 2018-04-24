@@ -1,0 +1,1 @@
+** := 1 - " exponent " flip setref " base " flip setref " base " getref [ " base " getref * ] " exponent " getref repeat i
