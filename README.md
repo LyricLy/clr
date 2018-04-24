@@ -57,3 +57,8 @@ For example, `" my_ref " [ 1 + ] modref` would add 1 to the `" my_ref "` referen
 Requires the `for` library.
 
 Reverse the list on top of the stack.
+
+### sinclude
+A simpler version of `include` that makes a few assumptions.
+
+Takes a single string `x` and imports `x.charm` with the namespace `x.`.
