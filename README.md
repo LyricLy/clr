@@ -52,3 +52,8 @@ any list modref
 Takes an object representing the reference to modify and a list representing the action to perform on it, then performs that action on the reference, redefining the reference to the result of the action.
 
 For example, `" my_ref " [ 1 + ] modref` would add 1 to the `" my_ref "` reference.
+
+### reverse
+Requires the `for` library.
+
+Reverse the list on top of the stack.

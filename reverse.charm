@@ -1,0 +1,2 @@
+" for.charm " " " include
+reverse := [ ] flip [ item concat ] revfor
