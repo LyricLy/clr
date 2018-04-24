@@ -43,3 +43,12 @@ Defines a single function, `setrefs`, that takes in a list and defines multiple 
 This is best explained with an example: `4 7 2 [ " first " " second " " third " ] setrefs` defines three named references; `" first "`, which is set to 4, `" second "`, set to 7, and `" third "`, set to 2.
 
 This function is useful for taking arguments in a function in a succinct and readable way.
+
+### modref
+Modify a reference according to a function.
+```
+any list modref
+```
+Takes an object representing the reference to modify and a list representing the action to perform on it, then performs that action on the reference, redefining the reference to the result of the action.
+
+For example, `" my_ref " [ 1 + ] modref` would add 1 to the `" my_ref "` reference.
