@@ -1,2 +1,0 @@
-_modref_args := " modref_function " flip setref " modref_reference " flip setref
-modref := _modref_args " modref_reference " getref getref " modref_function " getref i " modref_reference " getref flip setref
