@@ -11,8 +11,9 @@ You can change the values of `x`, `a`, `c` and `m` with the functions `seed`, `m
 Each of these functions takes a single integer and sets the corresponding variable to that integer.
 
 Call the `random` function to push a random number with these set variables. All of the variables are already predefined to values that will work, but for proper randomness try to seed the generator with environmental variables such as user input.
+The `shuffle` function takes a list and shuffles it randomly using the `random` function.
 
-Until Charm is fixed, this function will occasionally raise a floating point error. Try not to use a low number in the multiplier variable to minimize the chances of this.
+Until Charm is fixed, these functions will occasionally raise a floating point error. Try not to use a low number in the multiplier variable to minimize the chances of this.
 
 ### sinclude
 A simpler version of `include` that makes a few assumptions.
