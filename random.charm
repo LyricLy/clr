@@ -1,11 +1,25 @@
 " current " 0 setref
-" multiplier " 46826782 setref
-" increment " 469292692 setref
-" modulo " 100000 setref
-% := / pop
+" multiplier " 1103515245 setref
+" increment " 12345 setref
+" modulo " 1024 setref
+
 % :: int int -> int
-random := " current " getref " multiplier " getref * " increment " getref + " modulo " getref % " current " flip setref " current " getref
+% := / pop
+
+seed :: int ->
+multiplier :: int ->
+increment :: int ->
+modulo :: int ->
 seed := " current " flip setref
 multiplier := " multiplier " flip setref
 increment := " increment " flip setref
 modulo := " modulo " flip setref
+
+random :: -> int
+random := " current " getref " multiplier " getref * " increment " getref + " modulo " getref % " current " flip setref " current " getref
+
+shuffle :: list -> list
+_shuffle_set_refs := " list " flip setref " shuffled_list " [ ] setref
+_shuffle_list_length := " list " getref len flip pop
+_shuffle_body := [ " list " getref random _shuffle_list_length % dup " idx " flip setref at flip pop " shuffled_list " [ concat ] modref " list " [ " idx " getref delitem ] modref ]
+shuffle := len random + seed _shuffle_set_refs _shuffle_body _shuffle_list_length repeat i " shuffled_list " getref
